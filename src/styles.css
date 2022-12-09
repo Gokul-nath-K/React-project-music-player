@@ -1,82 +1,90 @@
 header {
-    padding: 20px;
+  padding: 20px;
 }
 
 .languages {
-    padding: 20px;
+  padding: 20px;
 }
 
 .autoplay {
-    padding: 20px;
+  padding: 20px;
 }
 
 .audio-quality {
-    padding: 20px;
+  padding: 20px;
 }
 
 .personalisation {
-    padding: 20px;
+  padding: 20px;
 }
 
-.settings-container {
-    position: absolute;
-    background-color: #212121;
-    color: rgb(252, 252, 252);
-    right: inherit;
-    top: inherit;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-
-}
-
-.setting-inner-container {
-    margin-bottom: 5%;
-    margin-top: 5%;
-    padding-left: 30px;
-    display: inherit;
+#settings-container {
+  color: white;
 }
 
 .settings-container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-/* .inner-container {
-    margin-top: 3%;
-} */
-.top{
+#settings-menu-row {
+  padding: 8px;
+  height: 25%;
+}
+
+.inner-container {
+  height: inherit;
+  width: inherit;
+  margin-left: 6%;
+  margin-top: 1%;
+}
+
+.top {
   color: white;
   margin: 10px;
 }
+
 .top-text {
   color: white;
-    width:  85.25%;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 4%;
+  width: 85.25%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 4%;
 }
+
 .top-element {
   color: white;
 }
+
 .top-pic {
-    display: contents !important;
+  display: contents !important;
 }
-.recent{
+
+.recent {
   color: white;
 }
-.avatar{
+
+.avatar {
   float: right;
 }
-.song{
+
+.song {
   color: white;
 }
-.wish{
+
+.wish {
   color: white;
 }
-.podcast-name{
-  color: white;
+
+#row {
+  margin-top: 20px;
+}
+
+#setting-subtitles {
+  height: 25%;
+    padding: 2%;
+    padding-left: 1%;
 }
