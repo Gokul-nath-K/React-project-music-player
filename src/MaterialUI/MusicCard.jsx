@@ -9,10 +9,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     height: 100,
+    backgroundColor: '#000000'
   },
   cover: {
-    width: 100,
+    width: 90,
+    height: 100,
   },
+  h6: {
+    color: '#ffffff',
+    fontSize: '17px'
+  }
 }));
 
 export default function MediaControlCard() {
@@ -23,15 +29,15 @@ export default function MediaControlCard() {
     <Card className={classes.root}>
       <CardMedia
         className={classes.cover}
-        image="https://res.cloudinary.com/dluspcdoz/image/upload/v1669982037/samples/animals/reindeer.jpg"
+        image="ranjithame.jpeg"
         title="Live from space album cover"
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h6" variant="h6">
+          <Typography component="h6" variant="h6" className={classes.h6}>
             Ranjithame
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography variant="subtitle1" color="textSecondary" className={classes.h6} >
           Thalapathy Vijay
           </Typography>
         </CardContent>

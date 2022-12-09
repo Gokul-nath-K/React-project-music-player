@@ -11,7 +11,7 @@ import { ListItemIcon } from "@material-ui/core";
 import { ListItemText } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
-const drawerWidth = "14.66%";
+const drawerWidth = "15%";
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -22,14 +22,14 @@ const useStyles = makeStyles((theme) => ({
   },
   iconStyle: {
     color: "white",
-    alignItems: "center",
+    // alignItems: 'center',
   },
   textStyle: {
     fontSize: "14px",
     // textAlign: "center",
   },
   divider: {
-    backgroundColor: "#474747",
+    backgroundColor: "grey",
   },
   toolbar: theme.mixins.toolbar,
 }));
@@ -44,17 +44,22 @@ function SideBar() {
     {
       text: "HOME",
       icon: <HomeRoundedIcon />,
-      path: "/home",
+      path: "/homepage",
     },
     {
       text: "SEARCH",
       icon: <SearchRoundedIcon />,
-      path: "/search",
+      path: "/homepage/search",
     },
     {
       text: "SETTINGS",
       icon: <SettingsRoundedIcon />,
-      path: "/settings",
+      path: "/homepage/settings",
+    },
+    {
+      text: "LOG OUT",
+      icon: <SettingsRoundedIcon />,
+      path: "/signIn",
     },
   ];
 
@@ -68,14 +73,15 @@ function SideBar() {
           classes={{ paper: classes.drawerPaper }}
           PaperProps={{
             sx: {
-              height: "85.5%",
+              height: "85%",
               bgcolor: "black",
               color: "white",
               borderRight: "0.25px solid  rgb(150, 149, 149)"
             },
           }}
         >
-          <br /><br />
+          <br /><br /><br />
+          <Divider className={classes.divider} />
           <List>
             {menuItems.map((item) => (
               <ListItem

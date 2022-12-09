@@ -7,7 +7,8 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 
 const useStyles = makeStyles({
   root: {
-    width: 200,
+    width: 180,
+    color: '#ffffff'
   },
 });
 
@@ -21,7 +22,7 @@ export default function ContinuousSlider() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item>
           <VolumeDown />
         </Grid>
