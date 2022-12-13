@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import "../styles.css";
+import Records from '../Data/homePage_db.json'
 import MusicControlBar from "../components/MusicControlBar";
 import SideBar from "../components/sideBar";
 import AppTopBar from "../components/AppTopBar";
@@ -8,7 +9,6 @@ import AppTopBar from "../components/AppTopBar";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import {
-  Button,
   CardContent,
   Typography,
   withStyles,
@@ -46,15 +46,14 @@ class HomePage extends Component {
             </div>
           </div>
 
+
           <div className="row" id="row">
             <div className="col-md-3">
-
-              <Button >
               <Card  sx={{ maxWidth: 200, maxHeight: 250, bgcolor: "#212121" }}>
                 <CardMedia
                   component="img"
                   height="170"
-                  image="ennai-vittu.jpg"
+                  image="Pictures/ennai-vittu.jpg"
                   sx={{ padding: "10px", paddingBottom: "0px" }}
                   />
                 <CardContent
@@ -65,11 +64,39 @@ class HomePage extends Component {
                   </Typography>
                 </CardContent>
               </Card>
-              </Button>
             </div>
           </div>
           <br />
+
+
           <div className="row" id="row">
+        {
+          Records && Records.map((record) => {
+                return (
+                    <div className="col-md-3">
+                        <Card sx={{ maxWidth: 200, maxHeight: 250, bgcolor: "#212121" }} >
+                        <CardMedia
+                            component='img'
+                            height='170'
+                            image={ record.image }
+                            sx={{ padding: "10px", paddingBottom: "0px" }}
+                        />
+                        <CardContent>
+                        <Typography variant="h6" classes={{ h6: classes.h6 }}>
+                            {record.name}
+                      </Typography>
+                        </CardContent>
+                        </Card>
+                    <br />
+                    </div>
+                );
+            })
+        }
+      </div>
+
+
+
+          {/* <div className="row" id="row">
             <div className="col-md-10">
               <Typography variant="h5" classes={{ h5: classes.h5 }}>
                 Hits different!
@@ -226,8 +253,8 @@ class HomePage extends Component {
               </Card>
             </div>
           </div>
-          <br />
-        </div>
+          <br />*/}
+        </div> 
         </div>
         <div className="music-control-bar">
           <MusicControlBar />
