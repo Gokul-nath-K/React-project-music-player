@@ -2,6 +2,7 @@ import React from "react";
 import AppTopBar from "../components/AppTopBar";
 import MusicControlBar from "../components/MusicControlBar";
 import SideBar from "../components/sideBar";
+import SearchBar from "../MaterialUI/SearchBar";
 
 export default function SearchPage() {
   return (
@@ -14,9 +15,11 @@ export default function SearchPage() {
       </div>
       <div className="content-container">
         <div className="search-container">
-          <h1>Search</h1>
-          <h4>This is search page</h4>
+          <SearchBar/>
         </div>
+        {/* <div className="search-result">
+          
+        </div> */}
       </div>
       <div className="music-control-bar">
         <MusicControlBar />

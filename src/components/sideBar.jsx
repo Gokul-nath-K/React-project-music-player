@@ -1,6 +1,6 @@
 import "../App.css";
 import React from "react";
-import { Divider, makeStyles, useTheme } from "@material-ui/core";
+import { Divider, makeStyles, Typography, useTheme } from "@material-ui/core";
 import Drawer from "@mui/material/Drawer";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
@@ -16,6 +16,7 @@ const drawerWidth = "15%";
 const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
+    paddingTop: 200
   },
   drawerPaper: {
     width: drawerWidth,
@@ -30,6 +31,13 @@ const useStyles = makeStyles((theme) => ({
   },
   divider: {
     backgroundColor: "grey",
+  },
+  h2: {
+    color: "white",
+  },
+  sideBarHeader: {
+    marginLeft: '15%',
+    marginTop: '15%'
   },
   toolbar: theme.mixins.toolbar,
 }));
@@ -56,11 +64,6 @@ function SideBar() {
       icon: <SettingsRoundedIcon />,
       path: "/homepage/settings",
     },
-    {
-      text: "LOG OUT",
-      icon: <SettingsRoundedIcon />,
-      path: "/signIn",
-    },
   ];
 
   return (
@@ -80,7 +83,10 @@ function SideBar() {
             },
           }}
         >
-          <br /><br /><br />
+          <div className= {classes.sideBarHeader}>
+            <Typography variant="h4"   classes={{ h2: classes.h2 }} >VIBEZY</Typography >
+          </div>
+          <br />
           <Divider className={classes.divider} />
           <List>
             {menuItems.map((item) => (

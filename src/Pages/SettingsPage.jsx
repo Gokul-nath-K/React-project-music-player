@@ -46,7 +46,7 @@ class SettingsPage extends Component {
               </Typography>
             </div>
 
-            <div className="row" id="settings-menu-row">
+            {/* <div className="row" id="settings-menu-row">
               <div className="col-md-12" id="setting-subtitles">
                 <Typography variant="h5" classes={{ h5: classes.h5 }}>
                   Languages
@@ -60,9 +60,9 @@ class SettingsPage extends Component {
               </div>
               <div className="col-md-3">
                 {/* drop down menu */}
-                <DropDownMenu />
+               {/*} <DropDownMenu />
               </div>
-            </div>
+            </div> */}
 
             {/* Original Code */}
 
@@ -96,19 +96,11 @@ class SettingsPage extends Component {
                 </Typography>
               </div>
               <div className="col-md-3">
+                <Switch />
                 {/* drop down menu */}
-                <DropDownMenu />
+                {/* <DropDownMenu /> */}
               </div>
 
-              <div className="col-md-9">
-                <Typography variant="body1" classes={{ body1: classes.body1 }}>
-                  Auto adjust quality{" "}
-                </Typography>
-              </div>
-              <div className="col-md-3">
-                {/* Toggle button */}
-                <Switch />
-              </div>
             </div>
 
             <div className="row" id="settings-menu-row">

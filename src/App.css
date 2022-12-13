@@ -1,3 +1,7 @@
+.App {
+  background-color: grey;
+}
+
 .music-control-bar {
   position: fixed;
   width: 100%;
@@ -27,6 +31,7 @@
   height: 75%;
   width: 85%;
   overflow: auto;
+  display: flex;
 }
   .app-top-bar {
   background-image: linear-gradient(180deg, rgb(0, 0, 16, 1), rgb(0, 0, 42, 0.9)); 

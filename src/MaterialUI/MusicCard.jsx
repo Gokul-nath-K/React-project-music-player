@@ -4,20 +4,31 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    height: 100,
-    backgroundColor: '#000000'
+    height: 110,
+    width: "100%",
+    backgroundColor: '#000000',
+    top: 0,
+    bottom: 0,
+
   },
   cover: {
-    width: 90,
-    height: 100,
+    marginLeft: '8%',
+    width: '20%',
+    height: 110,
   },
   h6: {
     color: '#ffffff',
     fontSize: '17px'
+  },
+  content: {
+    marginLeft: '5%',
+    width: '100%',
+    
   }
 }));
 
@@ -26,22 +37,24 @@ export default function MediaControlCard() {
   const theme = useTheme();
 
   return (
-    <Card className={classes.root}>
-      <CardMedia
-        className={classes.cover}
-        image="ranjithame.jpeg"
-        title="Live from space album cover"
-      />
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h6" variant="h6" className={classes.h6}>
-            Ranjithame
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" className={classes.h6} >
-          Thalapathy Vijay
-          </Typography>
-        </CardContent>
-      </div>
-    </Card>
+    <Link to='/nowplaying' style={{textDecoration:'none'}}>
+      <Card className={classes.root}>
+        <CardMedia
+          className={classes.cover}
+          image="Pictures/ranjithame.jpeg"
+          title="Live from space album cover"
+        />
+        <div className={classes.details}>
+          <CardContent className={classes.content}>
+            <Typography component="h6" variant="h6" className={classes.h6}>
+              Ranjithame -
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary" className={classes.h6} >
+            Thalapathy Vijay
+            </Typography>
+          </CardContent>
+        </div>
+      </Card>
+    </Link>
   );
 }

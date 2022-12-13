@@ -1,7 +1,9 @@
 import { Button, ButtonGroup, FormControlLabel, Checkbox, Typography, makeStyles, Grid } from '@material-ui/core';
+import { AccountCircleOutlined } from '@mui/icons-material';
 import { ButtonBase } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { spacing } from '@mui/system';
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -21,33 +23,29 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '15px',
     marginBottom: '18px'
   },
+  headerIcon: {
+    fontSize: 400,
+  }
 }));
 
 
 
-function SigninPage() {
+function SignupPage() {
 
   const classes = useStyles();
   return ( 
     <>
-      <div className="outer-container">
+      <div className={classes.outerContainer}>
         <div className={classes.paper} >
           <form className='form-root'>
-            {/* <ButtonBase
-              sx={{
-                alignItem: 'center'
-              }}
-            >
-              <Link to='/signIn'>
-                <Button> Sign in </Button>
-              </Link>
-              <Link to='/signUp'>
-                <Button> Sign up </Button>
-              </Link>
-              <Link to='/signindemo'>
-                <Button> Sign in demo</Button>
-              </Link>
-            </ButtonBase> */}
+          <TextField
+            variant='outlined'
+            margin= 'normal'
+            required
+            fullWidth  
+            id='email'
+            label= 'Full Name'
+          />
           <TextField
             variant='outlined'
             margin= 'normal'
@@ -76,20 +74,19 @@ function SigninPage() {
             variant='contained'
             color='secondary'
             >
-              Sign in
+              Sign up
           </ Button>
-          </ Link>
+          </Link>
           <Typography
           className={ classes.typography }
           >
-            <Grid container>
-              <Grid item xs >
-                forgot password?
-              </Grid >
+            <Grid container justifyContent='center' >
               <Grid item >
-                <Link to='/signUp' style={{textDecoration:'none'}}> Don't have an account? Sign Up </Link>
+                <Link to='/signIn' className={classes.submit}>
+                Already have an account? Sign in.
+                </Link>
               </Grid >
-            </Grid>
+            </ Grid>
           </Typography>
           </form>
 
@@ -99,4 +96,4 @@ function SigninPage() {
    );
 }
 
-export default SigninPage;
+export default SignupPage;

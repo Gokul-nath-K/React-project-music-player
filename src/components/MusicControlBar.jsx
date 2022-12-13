@@ -1,6 +1,12 @@
 import "../App.css";
 import React, { useState } from "react";
-import { Button, Grid, IconButton, makeStyles } from "@material-ui/core";
+import {
+  Button,
+  Grid,
+  IconButton,
+  makeStyles,
+  Slider,
+} from "@material-ui/core";
 import PlayCircleFilled from "@material-ui/icons/PlayCircleFilled";
 import ContinuousSlider from "../MaterialUI/VolumeSlider";
 import MediaCard from "../MaterialUI/MusicCard";
@@ -41,6 +47,9 @@ function MusicControlBar() {
           </div>
           <div className="col-md-4">
             <div className="controls">
+              <div className="row" id="music-slider">
+                <Slider></Slider>
+              </div>
               <IconButton className={classes.icon}>
                 <Replay10Icon className={classes.icon} />
               </IconButton>
@@ -62,7 +71,7 @@ function MusicControlBar() {
               </IconButton>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4" id="music-div-3">
             <IconButton className={classes.icon}>
               <QueueMusicRoundedIcon className={classes.icon} />
             </IconButton>

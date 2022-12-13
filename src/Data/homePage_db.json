@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name":  "Ennai Vittu",
-        "title": "Hits Different",
+        "title": "Recently Played",
         "image": "Pictures/ennai-vittu.jpg"
     },
     {
@@ -13,7 +13,7 @@
     },
     {
         "id": 3,
-        "name":  "Harris Hits",
+        "name":  "Kadhal Kadhal",
         "title": "Hits Different",
         "image": "Pictures/engeyum-kadhal.jpg"
     },
@@ -49,7 +49,7 @@
     },
     {
         "id": 9,
-        "name":  "Ilayaraj",
+        "name":  "Ilayaraja",
         "title": "Recommended Artist Radio",
         "image": "Pictures/ilayaraj.jpg"
     }
