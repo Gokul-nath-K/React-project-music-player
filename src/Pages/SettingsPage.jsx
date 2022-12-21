@@ -7,6 +7,7 @@ import AppTopBar from "../components/AppTopBar";
 import { Switch } from "@material-ui/core";
 import DropDownMenu from "../MaterialUI/dropDown";
 import { Typography, withStyles } from "@material-ui/core";
+import Player from "../components/Player";
 
 const useStyles = (theme) => ({
   h5: {
@@ -40,6 +41,7 @@ class SettingsPage extends Component {
 
         <div className="content-container">
           <div className="inner-container" id="setting-container">
+            {/* <img src="Pictures/pathala.jpg" /> */}
             <div className="row" id="settings-menu-row">
               <Typography variant="h3" classes={{ h3: classes.h3 }}>
                 Settings
@@ -123,7 +125,7 @@ class SettingsPage extends Component {
         </div>
 
         <div className="music-control-bar">
-          <MusicControlBar />
+          <Player />
         </div>
       </>
     );

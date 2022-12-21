@@ -8,10 +8,12 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
+    // backgroundColor: "grey",
     marginTop: theme.spacing(8),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    minHeight:"100%",
   },
   typography: {
     fontSize: "15px",
@@ -30,7 +32,7 @@ function SigninPage() {
   const classes = useStyles();
   return ( 
     <>
-      <div className="outer-container">
+      <div className={classes.outerContainer}>
         <div className={classes.paper} >
           <form className='form-root'>
             {/* <ButtonBase
@@ -63,6 +65,7 @@ function SigninPage() {
             fullWidth  
             id='email'
             label= 'Password'
+            type='password'
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}

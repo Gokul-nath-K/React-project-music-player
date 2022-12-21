@@ -9,9 +9,10 @@ import AppTopBar from "../components/AppTopBar";
 
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import { CardContent, Typography, withStyles } from "@material-ui/core";
+import { CardContent, makeStyles, Typography, withStyles } from "@material-ui/core";
+import Player from "../components/Player";
 
-const useStyles = (theme) => ({
+const useStyles = makeStyles({
   h6: {
     color: "#ffffff",
     fontSize: "16px",
@@ -23,9 +24,10 @@ const useStyles = (theme) => ({
  
 });
 
-class HomePage extends Component {
-  render() {
-    const { classes } = this.props;
+  
+const HomePage = () => {
+ 
+    const classes  = useStyles();
     return (
       <>
         <div className="app-top-bar">
@@ -64,7 +66,8 @@ class HomePage extends Component {
                                 <CardMedia
                                   component="img"
                                   height="170"
-                                  image={record.image}
+                                  // image="../Pictures/rahman.jpg"
+                                  image={record.imagePath}
                                   sx={{ padding: "10px", paddingBottom: "0px" }}
                                 />
                                 <CardContent>
@@ -87,12 +90,13 @@ class HomePage extends Component {
 
           </div>
         </div>
+        
         <div className="music-control-bar">
-          <MusicControlBar />
+          <Player />
         </div>
       </>
     );
-  }
+
 }
 
 export default withStyles(useStyles)(HomePage);

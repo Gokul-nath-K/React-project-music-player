@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function MediaControlCard() {
+const MediaControlCard = ({currentSong}) => {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -41,20 +41,22 @@ export default function MediaControlCard() {
       <Card className={classes.root}>
         <CardMedia
           className={classes.cover}
-          image="Pictures/ranjithame.jpeg"
+          image="../Pictures/ranjithame.jpeg"
           title="Live from space album cover"
         />
         <div className={classes.details}>
           <CardContent className={classes.content}>
             <Typography component="h6" variant="h6" className={classes.h6}>
-              Ranjithame -
+              { currentSong.title }
             </Typography>
-            <Typography variant="subtitle1" color="textSecondary" className={classes.h6} >
+            {/* <Typography variant="subtitle1" color="textSecondary" className={classes.h6} >
             Thalapathy Vijay
-            </Typography>
+            </Typography> */}
           </CardContent>
         </div>
       </Card>
     </Link>
   );
 }
+
+export default MediaControlCard;
